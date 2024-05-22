@@ -1,0 +1,3 @@
+-> desginining done
+-> get values from inputs
+->
