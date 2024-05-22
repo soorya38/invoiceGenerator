@@ -3,8 +3,8 @@
     <head>
         <title>GST INVOICE</title>
         <link rel="stylesheet" href="pages/index.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
     </head>
-
     <body>
         <div class="overallcontainer" >
 
@@ -18,18 +18,17 @@
             </div>
 
             <div class="header">
-                <input type="text" class="header" placeholder="TAX INVOICE">
+                <input type="text" class="header" placeholder="TAX INVOICE" id="header">
             </div>
 
             <div class="form"> 
-
                 <form>
-                    <input type="text" placeholder="Your Company" class="Company" required><br>
-                    <input type="text" placeholder="Your Name" class="name" required><br>
-                    <input type="text" placeholder="Company's GSTIN" class="GST" required><br>
-                    <input type="text" placeholder="Company's Address" class="Address" required><br>
-                    <input type="text" placeholder="City" class="City" required><br>
-                    <input type="text" placeholder="State" class="State" required><br>
+                    <input type="text" placeholder="Your Company" class="Company" id="name" required><br>
+                    <input type="text" placeholder="Your Name" class="name" id="company" required><br>
+                    <input type="text" placeholder="Company's GSTIN" class="GST" id="gst" required><br>
+                    <input type="text" placeholder="Company's Address" class="Address" id="companyAdd" required><br>
+                    <input type="text" placeholder="City" class="City" id="city" required><br>
+                    <input type="text" placeholder="State" class="State" id="state" required><br>
                     <div class="dropdown">
                         <select class="dropdownMenu">
                             <option value="Afghanistan">Afghanistan</option>
@@ -280,20 +279,21 @@
                             <option value="Yemen">Yemen</option>
                             <option value="Zambia">Zambia</option>
                             <option value="Zimbabwe">Zimbabwe</option>
-                        </select>             
+                          </select>
                     </div>
+                        
                 </form>
             </div>
 
             <div class="form1"> 
-
                 <form>
-                    <input type="text" value="Bill To:" class="Company"><br>
-                    <input type="text" placeholder="Your Client's Company" class="name"><br>
-                    <input type="text" placeholder="Client's GSTIN" class="GST"><br>
-                    <input type="text" placeholder="Client's Address" class="Address"><br>
-                    <input type="text" placeholder="City" class="City"><br>
-                    <input type="text" placeholder="State" class="State"><br>
+                    <input type="text" value="Bill To:" class="Company" id="nameCl"><br>
+                    <input type="text" placeholder="Your Client's Company" class="name" id="companyCl"><br>
+                    <input type="text" placeholder="Client's GSTIN" class="GST" id="gstCl"><br>
+                    <input type="text" placeholder="Client's Address" class="Address" id="companyAddCl"><br>
+                    <input type="text" placeholder="City" class="City" id="cityCl"><br>
+                    <input type="text" placeholder="State" class="State" id="stateCl"><br>
+
                     <div class="dropdown">
                         <select class="dropdownMenu">
                             <option value="Afghanistan">Afghanistan</option>
@@ -544,10 +544,10 @@
                             <option value="Yemen">Yemen</option>
                             <option value="Zambia">Zambia</option>
                             <option value="Zimbabwe">Zimbabwe</option>
-                        </select>
+                          </select>
                     </div><br>
 
-                    <label for="State">Place of State:</label>
+                    <label for="State">Place of Supply:</label>
 
                     <div class="dropdown" style="margin-left: 5px;">
                         <select class="dropdownMenu" style="padding-left: 0px;">
@@ -601,6 +601,19 @@
                 </form>
             </div>
 
+            <table class="GSTTABLE">
+                <tr style="border: none;">
+                    <th><input type="text" placeholder="Item Description" class="ID" style="width: 200px;"></th>
+                    <th><input type="text" placeholder="Qty" class="qty"><th>
+                    <th><input type="text" placeholder="Rate" class="rate"></th>
+                    <th><input type="text" placeholder="SGST"></th>
+                    <th><input type="text" placeholder="CGST"></th>
+                    <th><input type="text" placeholder="Cess"></th>
+                    <th><input type="text" placeholder="Amount"></th>
+                </tr>
+            </table>
+
+            <button onclick="printForm()">Save !</button>
         </div>
 
         <script>
@@ -611,7 +624,9 @@
                 file.setAttribute('accept', 'image/png, image/jpg, image/jpeg, image/bmp');
                 file.setAttribute('maxsize', '1000000')
                 file.click();
-            });  
-        </script>
+            });
+          
+        </script>   
+        <script src="pages/index.js"></script>
     </body>
 </html>

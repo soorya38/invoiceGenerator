@@ -1,153 +1,196 @@
 .overallcontainer{
-    margin-left: 150px;
-    margin-top: 100px;
-      height: 1000px;
-      width: 816px;
-      border:2px solid black;
-  }
- .image{
-  background-image: url('assets/images/upload.png');
-  margin-top: 80px;
-  margin-left: 80px;
-  border: 1px dotted grey;
-  cursor: pointer;
-
- }
- .uploadcontent{
-  margin-top: -120px;
-  margin-left: 250px;
-  font-weight: lighter;
-  color: #676767;
- }
- .pixel{
-  font-size: 12px;
-  font-weight: lighter;
- color: #676767;
- }
- .header{
-  font-size: 45px;
-  color: #38342c;
-  margin-left: 430px;
-  font-weight: bold;
-  margin-top: -150px;
-  width: 280px;
- }
- .form{
-    margin-top: 10px;
- }
- label{
-    margin-left: 85px;
- }
- input[type="text"]:nth-child(1){
-  padding: 5px;
-  margin-top: 70px;
-  margin-left: 80px;
-  border: none;
-  font-weight: lighter;
- }
- input[type="text"]{
-  padding: 5px;
-  margin-left: 80px;
-  border: none;
-  font-weight: lighter;
- }
- input[type="text"]:hover{
-  border: 1px solid rgb(0, 170, 255);
-  border-radius: 5%;
-  width: 300px;
- }
- .dropdown{
-  color: rgb(160, 160, 160);
-  background-color: white;
-  margin-left: 65px;
-  height: 35px;
-  
- }
-
- select{
-    padding: 5px;
-    -webkit-appearance: none;
-    border: none;
-    font-weight: bold;
-    color: #000;
-    width: 300px;
-     
- }
-select:hover{
-    -webkit-appearance: button;
+  margin-left: 150px;
+  margin-top: 100px;
+    height: 1000px;
+    width: 816px;
+    border:2px solid black;
 }
- .dropdown:hover{
-    border: 1px solid rgb(0, 170, 255);
-     
- }
- .dropdown-content{
-  display: none;
-  position: absolute;
-  background-color:transparent;
-  color:gray;
-  height: 20px;
-  width: 260px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  overflow-y: scroll;
- }
- .dropdown:hover .dropdown-content{
-  display: block;
-  overflow-y: scroll;
-  
- }
+.image{
+background-image: url('assets/images/upload.png');
+margin-top: 80px;
+margin-left: 80px;
+border: 1px dotted grey;
+cursor: pointer;
+
+}
+.uploadcontent{
+margin-top: -120px;
+margin-left: 250px;
+font-weight: lighter;
+color: #676767;
+}
+.pixel{
+font-size: 12px;
+font-weight: lighter;
+color: #676767;
+}
+.header{
+font-size: 45px;
+color: #38342c;
+margin-left: 430px;
+font-weight: bold;
+margin-top: -150px;
+width: 280px;
+}
+.form{
+  margin-top: 10px;
+}
+label{
+  margin-left: 85px;
+}
+input[type="text"]:nth-child(1){
+padding: 5px;
+margin-top: 70px;
+margin-left: 80px;
+border: none;
+font-weight: lighter;
+}
+input[type="text"]{
+padding: 5px;
+margin-left: 80px;
+border: none;
+font-weight: lighter;
+}
+input[type="text"]:hover{
+border: 1px solid rgb(0, 170, 255);
+border-radius: 5%;
+width: 300px;
+}
+.dropdown{
+color: rgb(160, 160, 160);
+background-color: white;
+margin-left: 65px;
+height: 35px;
+
+}
+
+select{
+  padding: 5px;
+  -webkit-appearance: none;
+  border: none;
+  font-weight: bold;
+  color: #000;
+  width: 300px;
+   
+}
+select:hover{
+  -webkit-appearance: button;
+}
+.dropdown:hover{
+  border: 1px solid rgb(0, 170, 255);
+   
+}
+.dropdown-content{
+display: none;
+position: absolute;
+background-color:transparent;
+color:gray;
+height: 20px;
+width: 260px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+overflow-y: scroll;
+}
+.dropdown:hover .dropdown-content{
+display: block;
+overflow-y: scroll;
+
+}
 .dropdown {
-    position: relative;
-    display: inline-block;
-  }  .dropdown select {
-    background-color:transparent;
-    border: none;
-    color:gray;
-    padding: 10px 20px;
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  .dropdown select option {
-    padding: 10px;
-    font-size: 16px;
-  }
-  .dropdown select option:hover {
-    background-color: transparent;
-  }
+  position: relative;
+  display: inline-block;
+}  .dropdown select {
+  background-color:transparent;
+  border: none;
+  color:gray;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.dropdown select option {
+  padding: 10px;
+  font-size: 16px;
+}
+.dropdown select option:hover {
+  background-color: transparent;
+}
 
 /* .INVOICE{
-    width:50px;
+  width:50px;
 }
 .INVNO{
-    margin-left: 500px;
+  margin-left: 500px;
 } */
 
 .form2 {
-    margin-left: 400px;
-    margin-top: -300px;
+  margin-left: 400px;
+  margin-top: -300px;
 }
 .form2 input[type="text"]{
 width: 80px;
 
 }
 .INVOICE{
-    margin-right: -70px;
+  margin-right: -70px;
 }
 
 .INVOICEDATE{
-    margin-top: 10px;
-    margin-right: -70px; 
+  margin-top: 10px;
+  margin-right: -70px; 
 }
 input[type="date"]{
-    margin-left: 80px;
-    border: none;
+  margin-left: 80px;
+  border: none;
 }
 input[type="date"] :active{
-    border: 5px solid rgb(0, 170, 255);
-    cursor: pointer;
+  border: 5px solid rgb(0, 170, 255);
+  cursor: pointer;
 }
 .DUEDATE{
-    margin-top: 10px;
-    margin-right: -70px; 
+  margin-top: 10px;
+  margin-right: -70px; 
+}
+table{
+ /* background-color:black; */
+  
+  border-collapse: collapse;
+  
+}
+th{
+  background-color:black;
+  height: 30px;
+  /* border-collapse: collapse; */
+   
+}
+th :nth-child(1){
+  margin-top: -80px;
+  width: 200px;
+  margin-left: 3px;
+}
+.GSTTABLE input[type="text"] {
+  margin-top: -80px;
+  width: 50px;
+  color: white;
+  background-color: #000;
+  margin-left: 3px;
+  
+}
+.GSTTABLE{
+  margin-top: 150px;
+  margin-left: 80px;
+  /* border: 1px solid black; */
+}
+.qty{
+  width: 50px;
+}
+.rate{
+  margin-left: -550px;
+}
+.GSTTABLE ::placeholder{
+  color: white;
+  font-weight: bold;
+}
+.GSTTABLE table{
+  border-collapse:collapse ;
 }
