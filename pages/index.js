@@ -60,27 +60,21 @@ async function printForm() {
     doc.addImage(imgData, 'PNG', 10, y+=2, 190, 0);
     let tableData = [];
 
-    // let table = document.getElementById('table');
-    // let doc = new jsPDF();
-    // let y = 10; // Initial y position
     y += 7;
     for (let i = 0; i < table.rows.length; i++) {
-        let x = 10; // Initial x position for each row
+        let x = 10;
         let row = table.rows[i];
         for (let j = 0; j < row.cells.length; j++) {
             let cell = row.cells[j];
             let input = cell.querySelector('input[type="text"], textarea, input[type="number"]');
             let cellValue = input ? input.value : '';
             if(j == 0)
-                doc.text(cellValue, x + (j+1) * 10, y); // Position text based on column index
+                doc.text(cellValue, x + (j+1) * 10, y);
             else    
                 doc.text(cellValue, 25 + (j+1) * 23, y);
         }
-        y += 6; // Move to the next line after each row
+        y += 6;
     }
-
-
-    console.log(tableData);
 
     doc.save();
 }
