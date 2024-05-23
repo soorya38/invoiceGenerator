@@ -604,14 +604,40 @@
             <table class="GSTTABLE">
                 <tr style="border: none;">
                     <th><input type="text" placeholder="Item Description" class="ID" style="width: 200px;"></th>
-                    <th><input type="text" placeholder="Qty" class="qty"><th>
-                    <th><input type="text" placeholder="Rate" class="rate"></th>
-                    <th><input type="text" placeholder="SGST"></th>
-                    <th><input type="text" placeholder="CGST"></th>
-                    <th><input type="text" placeholder="Cess"></th>
-                    <th><input type="text" placeholder="Amount"></th>
+            <th><input type="text" placeholder="Qty" class="qty"><th>
+            <th><input type="text" placeholder="Rate" class="rate" style="margin-left: -140px;"></th>
+            <th><input type="text" placeholder="SGST" style="margin-left: -150px;"></th>
+            <th><input type="text" placeholder="CGST" style="margin-left: -160px;"></th>
+            <th><input type="text" placeholder="Cess" style="margin-left: -170px;"></th>
+            <th><input type="text" placeholder="Amount" style="margin-left: -110px;"></th>
                 </tr>
-            </table>
+                <tr>
+                    <td>
+                        <textarea  placeholder="Item Description" class="ID" style="width: 200px;" >Enter Item Name</textarea>
+                    </td>
+                    <td><input type="number" value="2" ></td>
+                   <td><input type="number" value="2" ></td>
+                   <td><input type="number" value="2" style="margin-left: 30px;"></td>
+                    <td><input type="number" value="2" style="margin-left: 30px;"></td>
+                    <td><input type="number" value="2" style="margin-left: 30px;"></td>
+                    <td><input type="number" value="2" style="margin-left: 60px;"></td>
+                </tr>
+             </table>
+             <button class="additem"><span class="fas fa-plus"></span> ADD LINE ITEM</button>
+                <div class="form3">
+                    <form>
+                        <input type="text" placeholder="Sub Total" class="subtotal" style="margin-left: 370px;width: 70px;">
+                        <input type="text" value="200.00" class="subtotalvalue" style="margin-left: 270px;width:50px;"><br><br>
+                    
+                        <p class="sgst" >SGST (6%)
+                        <input type="text" value="12.00" class="sgstvalue" style=" margin-left: 270px;margin-top: -90px;width: 50px;"></p>
+                        
+                        <p class="cgst" >CGST (6%)
+                            <input type="text" value="12.00" class="sgstvalue" style=" margin-left: 270px;margin-top: 10px;width: 50px;"></p><br>
+                            <input type="text" placeholder="Total" class="subtotal" style="margin-left: 370px;width: 70px;">
+                            <input type="text" value="200.00" class="subtotalvalue" style="margin-left: 270px;width:50px;"><br><br>
+                        
+                    </form>
 
             <button onclick="printForm()">Save !</button>
         </div>

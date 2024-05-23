@@ -1,8 +1,8 @@
 .overallcontainer{
   margin-left: 150px;
   margin-top: 100px;
-    height: 1000px;
-    width: 816px;
+    height: 1200px;
+    width: 876px;
     border:2px solid black;
 }
 .image{
@@ -115,8 +115,8 @@ overflow-y: scroll;
 .dropdown select option:hover {
   background-color: transparent;
 }
-
-/* .INVOICE{
+/* 
+.INVOICE{
   width:50px;
 }
 .INVNO{
@@ -193,4 +193,44 @@ th :nth-child(1){
 }
 .GSTTABLE table{
   border-collapse:collapse ;
+}
+input[type="number"]{
+  width: 50px;
+  border: none;
+ 
+}
+textarea
+{
+  border: none;
+  height: 50px;
+}
+.additem{
+  background-color: transparent;
+  border: none;
+  color:#408dfb;
+  cursor: pointer;
+  margin-left: 80px;
+  padding-top: 15px;
+}
+span{
+  background-color:#408dfb;
+  color: white;
+  border-radius: 50%;
+}
+.subtotal{
+  margin-left: 300px;
+  font-size: 14px;
+}
+.subtotal:hover{
+  width: 0px;
+}
+.sgst{
+  color: #676767;
+  margin-left: 375px;
+  margin-top: 10px;
+}
+.cgst{
+  color: #676767;
+  margin-left: 375px;
+  margin-top: 20px;
 }
