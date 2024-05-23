@@ -54,6 +54,7 @@ async function printForm() {
 
     let table = document.getElementById('table');
 
+    //fetching table data
     const tableHeader = document.getElementById('table').getElementsByTagName('tr')[0];
     const canvas = await html2canvas(tableHeader);
     const imgData = canvas.toDataURL('image/png');
@@ -61,6 +62,8 @@ async function printForm() {
     let tableData = [];
 
     y += 7;
+
+    //printing table data
     for (let i = 0; i < table.rows.length; i++) {
         let x = 10;
         let row = table.rows[i];
@@ -68,12 +71,21 @@ async function printForm() {
             let cell = row.cells[j];
             let input = cell.querySelector('input[type="text"], textarea, input[type="number"]');
             let cellValue = input ? input.value : '';
-            if(j == 0)
-                doc.text(cellValue, x + (j+1) * 10, y);
-            else    
-                doc.text(cellValue, 25 + (j+1) * 23, y);
+            
+            if (j == 0) {
+                doc.text(cellValue, x + (j + 1) * 10, y);
+            } else {
+                doc.text(cellValue, 25 + (j + 1) * 23, y);
+            }
         }
-        y += 6;
+        y += 10;
+        
+        if (y > 297 - 10) { 
+            doc.addPage();
+            y = 10;
+            doc.addImage(imgData, 'PNG', 10, y+=2, 190, 0);
+            y += 17;
+        }
     }
 
     doc.save();
