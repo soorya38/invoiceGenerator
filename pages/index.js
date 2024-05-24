@@ -75,10 +75,44 @@ async function printForm() {
             if (j == 0) {
                 doc.text(cellValue, x + (j + 1) * 10, y);
             } else {
-                doc.text(cellValue, 25 + (j + 1) * 23, y);
+                if(j == 6)
+                    doc.text(cellValue, x+10 + (j + 1) * 23, y);
+                else if(j == 5)
+                    doc.text(cellValue, x+10 + (j + 1) * 23, y);
+                else if(j == 4)
+                    doc.text(cellValue, x+15 + (j + 1) * 23, y);
+                else if(j == 3)
+                    doc.text(cellValue, x+18 + (j + 1) * 23, y);
+                else if(j == 2)
+                    doc.text(cellValue, x+23 + (j + 1) * 23, y);
+                else
+                    doc.text(cellValue, x+27 + (j + 1) * 23, y);
+
+                if (j == 3) {
+                    let spanElement = cell.querySelector('.sgst1');
+                    if (spanElement) {
+                        let spanValue = spanElement.innerHTML;
+                        doc.text(spanValue, x+17 + (j + 1) * 23, y + 6);
+                    }
+                } else if(j == 4) {
+                    let spanElement = cell.querySelector('.sgst1');
+                    if (spanElement) {
+                        let spanValue = spanElement.innerHTML;
+                        doc.text(spanValue, x+15 + (j + 1) * 23, y + 6);
+                    }
+                } else if(j == 5) {
+                    let spanElement = cell.querySelector('.sgst1');
+                    if (spanElement) {
+                        let spanValue = spanElement.innerHTML;
+                        doc.text(spanValue, x+10 + (j + 1) * 23, y + 6);
+                    }
+                }
             }
         }
-        y += 10;
+        if(i != 0)
+            y += 14;
+        else    
+            y += 12;
         
         if (y > 297 - 10) { 
             doc.addPage();
