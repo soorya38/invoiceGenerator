@@ -43,6 +43,10 @@ document.querySelectorAll('.input-number, .AMOUNT').forEach((input) => {
 });
 
 document.getElementById('addButton').addEventListener('click', function() {
+    newRow();
+});
+
+const newRow = () => {
     let table = document.getElementById('table');
 
     let tr = document.createElement('tr');
@@ -59,7 +63,7 @@ document.getElementById('addButton').addEventListener('click', function() {
     tr.appendChild(td1);
 
     // Helper function to create input elements
-    function createInput(value, className, marginLeft = '10px', marginTop = '') {
+    function createInput(value, className, marginLeft = '12px', marginTop = '') {
         let input = document.createElement('input');
         input.setAttribute('type', 'number');
         input.setAttribute('value', value);
@@ -108,5 +112,17 @@ document.getElementById('addButton').addEventListener('click', function() {
     td7.appendChild(input6);
     tr.appendChild(td7);
 
+    let btn = document.createElement('button');
+    btn.textContent = "Delete";
+    btn.style.marginTop = "25px";
+    btn.style.marginLeft = "0px";
+    tr.append(btn);
+
+    btn.onclick = () => {
+        table.removeChild(tr);
+    };
+
     table.appendChild(tr);
-});
+}
+
+newRow();

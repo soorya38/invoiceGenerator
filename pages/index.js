@@ -1,4 +1,6 @@
 async function printForm() {
+    let sum = 0;
+
     let header = document.getElementById('header');
     let name = document.getElementById('name');
     let company = document.getElementById('company');
@@ -44,7 +46,7 @@ async function printForm() {
     doc.setFontStyle('bold');
     doc.text("Bill to: ", 18, y += 6);
     doc.setFontStyle('none');
-    doc.setFontSize(14);
+    doc.setFontSize(10);
     doc.text(nameCl.value, 18, y += 6);
     doc.text(companyCl.value, 18, y += 6);
     doc.text(gstCl.value, 18, y += 6);
@@ -65,7 +67,7 @@ async function printForm() {
 
     //printing table data
     for (let i = 0; i < table.rows.length; i++) {
-        let x = 10;
+        let x = 0;
         let row = table.rows[i];
         for (let j = 0; j < row.cells.length; j++) {
             let cell = row.cells[j];
@@ -75,8 +77,10 @@ async function printForm() {
             if (j == 0) {
                 doc.text(cellValue, x + (j + 1) * 10, y);
             } else {
-                if(j == 6)
+                if(j == 6) {
                     doc.text(cellValue, x+10 + (j + 1) * 23, y);
+                    sum += Number(cellValue);
+                }
                 else if(j == 5)
                     doc.text(cellValue, x+10 + (j + 1) * 23, y);
                 else if(j == 4)
@@ -109,6 +113,7 @@ async function printForm() {
                 }
             }
         }
+
         if(i != 0)
             y += 14;
         else    
@@ -121,6 +126,8 @@ async function printForm() {
             y += 17;
         }
     }
+
+    doc.text(String(sum), 10, y);
 
     doc.save();
 }

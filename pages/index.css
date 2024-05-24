@@ -82,12 +82,17 @@ select{
   width: 300px;
    
 }
+
+th, td {
+  padding: 8px;
+  text-align: center; /* Align the content in the center */
+}
+
 select:hover{
   -webkit-appearance: button;
 }
 .dropdown:hover{
   border: 1px solid rgb(0, 170, 255);
-   
 }
 .dropdown-content{
 display: none;
@@ -131,6 +136,8 @@ overflow-y: scroll;
 .INVNO{
   margin-left: 500px;
 } */
+
+
 
 .form2 {
   margin-left: 400px;
@@ -187,7 +194,7 @@ th :nth-child(1){
 }
 .GSTTABLE{
   margin-top: 150px;
-  margin-left: 80px;
+  margin-left: 30px;
   /* border: 1px solid black; */
 }
 .qty{
