@@ -1,5 +1,7 @@
 async function printForm() {
     let sum = 0;
+    let sumCgst = 0;
+    let sumSgst = 0;
 
     let header = document.getElementById('header');
     let name = document.getElementById('name');
@@ -80,13 +82,18 @@ async function printForm() {
                 if(j == 6) {
                     doc.text(cellValue, x+10 + (j + 1) * 23, y);
                     sum += Number(cellValue);
+                    
                 }
                 else if(j == 5)
                     doc.text(cellValue, x+10 + (j + 1) * 23, y);
-                else if(j == 4)
+                else if(j == 4) {
                     doc.text(cellValue, x+15 + (j + 1) * 23, y);
-                else if(j == 3)
+                    sumCgst += Number(cellValue);
+                }
+                else if(j == 3) {
                     doc.text(cellValue, x+18 + (j + 1) * 23, y);
+                    sumSgst += Number(cellValue);
+                }
                 else if(j == 2)
                     doc.text(cellValue, x+23 + (j + 1) * 23, y);
                 else
@@ -127,7 +134,31 @@ async function printForm() {
         }
     }
 
-    doc.text(String(sum), 10, y);
+    doc.setFontSize(14);
+    function addText(text, x, incrementY) {
+        if (incrementY) {
+            if (y + incrementY > doc.internal.pageSize.height - 20) {
+                doc.addPage();
+                y = 20;
+            } else {
+                y += incrementY;
+            }
+        }
+        doc.text(text, x, y);
+    }
+    
+    let sumValue = document.getElementById('sumValue');
+    addText(sumValue.value !== '' ? sumValue.value + ": " : "Sub total: ", 150, 30);
+    doc.text(String(sum), 180, y);
+    
+    addText("CGST: ", 150, 10);
+    doc.text(String(sumCgst), 180, y);
+    
+    addText("SGST: ", 150, 10);
+    doc.text(String(sumSgst), 180, y);
+    
+    addText("Total: ", 150, 10);
+    doc.text(String(sumSgst + sumCgst + sum), 180, y);
 
     doc.save();
 }
