@@ -25,6 +25,8 @@ async function printForm() {
     let doc = new jsPDF();
     let y = 24;
     
+    //add.text("text(string)", x, y)
+
     // Add Company details
     doc.setFontStyle('bold');
     doc.setFontSize(10);
@@ -36,13 +38,14 @@ async function printForm() {
     doc.text(companyAdd.value, 18, y += 6);
     doc.text(city.value, 18, y += 6);
     doc.text(state.value, 18, y += 6);
+    doc.text(countryCl.value,18,y+=6);
 
     // Add Header
     doc.setFontSize(28);
     doc.text(header.value, 140, 30);
     doc.setFontSize(14);
     y += 10;
-
+    doc.text(invoiceNo.value,180,y-27)
     // Add Client company details
     doc.setFontSize(10);
     doc.setFontStyle('bold');
@@ -55,6 +58,11 @@ async function printForm() {
     doc.text(companyAddCl.value, 18, y += 6);
     doc.text(cityCl.value, 18, y += 6);
     doc.text(stateCl.value, 18, y += 6);
+    doc.text(countryCl.value,18,y+=6);
+    doc.text("Place of supply : " + placeOfSupply.value, 18, y += 6);
+    doc.text("Invoice Date: "+invoiceDate.value,150,y-40)
+    doc.text("Due Date:"+dueDate.value,150,y-34);
+
     // doc.text(countryCl.value, 18, y += 6);
 
     let table = document.getElementById('table');

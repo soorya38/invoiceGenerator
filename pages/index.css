@@ -239,6 +239,14 @@ span{
 .subtotal:hover{
   width: 0px;
 }
+#deleteButton{
+  background-color: transparent;
+  border: 1.5px solid #fab2b1;
+  color: #fab2b1;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
 .sgst{
   color: #676767;
   margin-left: 375px;
@@ -254,4 +262,13 @@ span{
   border: none;
   color: #727272;
   margin-top: 15px;
+}
+.save{
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid #408dfb;
+  margin-left: 700px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  cursor: pointer;
 }

@@ -137,7 +137,8 @@ const newRow = () => {
     tr.appendChild(td7);
 
     let btn = document.createElement('button');
-    btn.textContent = "Delete";
+    btn.textContent = "x";
+    btn.setAttribute('id', 'deleteButton');
     btn.style.marginTop = "25px";
     btn.style.marginLeft = "0px";
     tr.append(btn);
