@@ -55,6 +55,7 @@ async function printForm() {
     doc.text(companyAddCl.value, 18, y += 6);
     doc.text(cityCl.value, 18, y += 6);
     doc.text(stateCl.value, 18, y += 6);
+    // doc.text(countryCl.value, 18, y += 6);
 
     let table = document.getElementById('table');
 
