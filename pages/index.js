@@ -74,6 +74,12 @@ async function printForm() {
     doc.addImage(imgData, 'PNG', 10, y+=2, 190, 0);
     let tableData = [];
 
+    //logo
+    const logo = document.getElementById('imageDisplay');
+const canvas1 = await html2canvas(logo);
+const imgData1 = canvas1.toDataURL('image/png');
+doc.addImage(imgData1, 'PNG', 15, 10, 50, 30);
+
     y += 7;
 
     //printing table data
