@@ -23,7 +23,7 @@ async function printForm() {
     let invoiceDate = document.getElementById('invoiceDate');
     let dueDate = document.getElementById('dueDate');
     let doc = new jsPDF();
-    let y = 24;
+    let y = 34;
     
     //add.text("text(string)", x, y)
 
@@ -76,9 +76,9 @@ async function printForm() {
 
     //logo
     const logo = document.getElementById('imageDisplay');
-const canvas1 = await html2canvas(logo);
-const imgData1 = canvas1.toDataURL('image/png');
-doc.addImage(imgData1, 'PNG', 15, 10, 50, 30);
+    const canvas1 = await html2canvas(logo);
+    const imgData1 = canvas1.toDataURL('image/png');
+    doc.addImage(imgData1, 'PNG', 15, 10, 40, 20);
 
     y += 7;
 
